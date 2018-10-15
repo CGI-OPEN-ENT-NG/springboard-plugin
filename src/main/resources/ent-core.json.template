@@ -54,6 +54,15 @@
     "address": "entcore.zipper"
   }
 },
+{   
+  "name": "fr.cgi~mod-sftp~1.0.0",
+  "waitDeploy": true,
+  "config": {
+    "main" : "fr.cgi.sftp.Sftp",
+    "worker" : true,
+    "address" : "sftp"
+  }
+},                          
 {
   "name": "fr.wseduc~mod-postgresql~1.0.0",
   "waitDeploy" : true,
@@ -221,6 +230,9 @@
         "slo": ${samlSLO},
         "loginUri":"${federationLoginUri}",
         "callbackParam":"${federationCallBackParam}",
+        "saml-entng-idp-nq": "${samlEntngIdpNq}",
+        "saml-public-key": "${samlPublicKey}",
+        "idp-metadata-mapping": "${idpMetadataMapping}",
         <% } %>
         "authenticationServer": {
           "loginURL": "/auth/login",
